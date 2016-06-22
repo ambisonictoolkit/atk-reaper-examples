@@ -1,1 +1,8 @@
+# OSX Desktop Service Store
+.DS_Store
+
+# REAPER project backups
 *.RPP-bak
+
+# REAPER waveform peak files
+*.reapeaks
