@@ -1,0 +1,509 @@
+<REAPER_PROJECT 0.1 "5.24/OSX" 1473766248
+  <NOTES 1
+    |This projects demonstrates four different approaches to how mono sources can be encoded to First Order Ambisonics (FOA) using teh ATK for Reaper plugins:
+    |
+    |- Planewave
+    |- Omni
+    |- Spreader
+    |- Diffuser
+    |
+    |Often it will make sense to perform further spatial transforms once the sound source has been encoded.
+    |
+    |The project contains 6 tracks:
+    |
+    |- Visualize : Here the Harpex plugin is used to visualise the effect of encodings and transforms. Sound from this track is NOT passed on to the Master bus, it is only used for visualisation.
+    |- B-format Mix : This track collects the mix of all encoding from its subfolder tracks, but this track does not contain any media items of effects in itself. Sound from this track is passed on to the master bus as well as the Visualize track.
+    |- 4 tracks used for the different kinds of encodings, one for each. Unmute one of these at a time, and study and play with the effect chain on the track.
+    |
+    |Decoding from B-format to Binaural (Headphone listening) takes place at the master bus.
+    |
+    |The setting up and use of this project is demonstrated in this screencast:
+    |
+    |https://vimeo.com/182434517
+  >
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 1
+  ENVATTACH 1
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0
+  MAXPROJLEN 0 600
+  GRID 3455 8 1 8 1 0 0
+  TIMEMODE 1 2 -1 25 0
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 0
+  ZOOM 4.9715378083895 0 0
+  VZOOMEX 3
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 25 100 40 1000 300 0 0 1
+  MIDIEDITOR 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "media" ""
+  <RECORD_CFG
+    ZXZhdyAIAA==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN ""
+  RENDER_FMT 0 2 0
+  RENDER_1X 0
+  RENDER_RANGE 1 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 0
+  DEFPITCHMODE 589824
+  TAKELANE 1
+  SAMPLERATE 48000 1 0
+  <RENDER_CFG
+    ZXZhdyAIAA==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 0 0
+  SELECTION2 0 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 4 2
+  MASTER_VOLUME 0.07909903115787 0 -1 -1 1
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERFXLIST
+    WNDRECT 471 51 793 667
+    SHOW 0
+    LASTSEL 0
+    DOCKED 0
+    BYPASS 0 0 0
+    <JS ATK/FOA/Decode/Binaural ""
+      21.000000 0.000000 1.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    >
+    FLOATPOS 0 0 0 0
+    FXID {30EF95EB-CEC7-B44A-A9B0-A915E4C044C1}
+    WAK 0
+  >
+  <MASTERPLAYSPEEDENV
+    ACT 0
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    ACT 0
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  <PROJBAY
+  >
+  <TRACK {EFFC0B0C-037D-9542-8FAC-EB7E4E4FE2C8}
+    NAME Visualize
+    PEAKCOL 30749952
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    ISBUS 0 0
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {EFFC0B0C-037D-9542-8FAC-EB7E4E4FE2C8}
+    PERF 0
+    AUXRECV 1 0 1 0 0 0 0 2048 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 0 0
+    <FXCHAIN
+      WNDRECT 32 342 941 435
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <AU "AU: Harpex: Harpex-B" "Harpex: Harpex-B" "" 1635083896 2000040758 1111577172
+        6QMAAAAAAAAEAAAAAQAAAAAAAAACAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAEAAAAAQAAAAAAAAACAAAAAAAAAAQAAAAAAAAACAAAAAAAAACiCgAAPD94bWwgdmVyc2lv
+        bj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBs
+        ZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+ZGF0YTwva2V5PgoJPGRhdGE+CglBQUFBQUFB
+        QUFBQUFBQUNGQUFBQUFBQUFBQUFBQUFBQkFBQUFBQUFBQUFJQUFBQUFBQUFBQXdBQUFBQUFBQUFFQUFBQQoJQUFBQUFBVUFBQUFBQUFBQUJnQUFBQUFBQUFBSEFBQUFB
+        QUFBQUFnQUFBQUFBQUFBQ1FBQUFBQUFBQUFLQUFBQUFBQUEKCUFBc0FBQUFBQUFBQURBQUFBQUFBQUFBTkFBQUFBQUFBQUE0QUFBQUFBQUFBRHdBQUFBQUFBQUFRQUFB
+        QUFBQUFBQkVBCglBQUFBQUFBQUVnQUFBQUFBQUFBVEFBQUFBQUFBQUJRQUFBQUFBQUFBRlFBQUFBQUFBQUFXQUFBQUFBQUFBQmNBQUFBQQoJQUFBQUdBQUFBQUFBQUFB
+        WkFBQUFBQUFBQUJvQUFBQUFBQUFBR3dBQUFBQUFBQUFjQUFBQUFBQUFBQjBBQUFBQUFBQUEKCUhnQUFBQUFBQUFBZkFBQUFBQUFBQUNBQUFBQUFBQUFBSVFBQUFBQUFB
+        QUFpQUFBQUFBQUFBQ01BQUFBQUFBQUFKQUFBCglBQUFBQUFBbEFBQUFBQUFBQUNZQUFBQUFBQUFBSndBQUFBQUFBQUFvQUFBQUFBQUFBQ2tBQUFBQUFBQUFLZ0FBQUFB
+        QQoJQUFBckFBQUFBQUFBQUN3QUFBQUFBQUFBTFFBQUFBQUFBQUF1QUFBQUFBQUFBQzhBQUFBQUFBQUFNQUFBQUFBQUFBQXgKCUFBQUFBQUFBQURJQUFBQUFBQUFBTXdB
+        QUFBQUFBQUEwQUFBQUFBQUFBRFVBQUFBQUFBQUFOZ0FBQUFBQUFBQTNBQUFBCglBQUFBQURnQUFBQUFBQUFBT1FBQUFBQUFBQUE2QUFBQUFBQUFBRHNBQUFBQUFBQUFQ
+        QUFBQUFBQUFBQTlBQUFBQUFBQQoJQUQ0QUFBQUFBQUFBUHdBQUFBQUFBQUJBQUFBQUFBQUFBRUVBQUFBQUFBQUFRZ0FBQUFBQUFBQkRBQUFBQUFBQUFFUUEKCUFBQUFB
+        QUFBUlFBQUFBQUFBQUJHQUFBQUFBQUFBRWNBQUFBQUFBQUFTQUFBQUFBQUFBQkpBQUFBQUFBQUFFb0FBQUFBCglBQUFBU3dBQUFBQUFBQUJNQUFBQUFBQUFBRTBBQUFB
+        QUFBQUFUZ0FBQUFBQUFBQlBBQUFBQUFBQUFGQUFBQUFBQUFBQQoJVVFBQUFBQUFBQUJTQUFBQUFBQUFBRk1BQUFBQUFBQUFWQUFBQUFBQUFBQlZBQUFBQUFBQUFGWUFB
+        QUFBQUFBQVZ3QUEKCUFBQUFBQUJZQUFBQUFBQUFBRmtBQUFBQUFBQUFXZ0FBQUFBQUFBQmJBQUFBQUFBQUFGd0FBQUFBQUFBQVhRQUFBQUFBCglBQUJlQUFBQUFBQUFB
+        RjhBQUFBQUFBQUFZQUFBQUFBQUFBQmhBQUFBQUFBQUFHSUFBQUFBQUFBQVl3QUFBQUFBQUFCawoJQUFBQUFBQUFBR1VBQUFBQUFBQUFaZ0FBQUFBQUFBQm5BQUFBQUFB
+        QUFHZ0FBQUFBQUFBQWFRQUFBQUFBQUFCcUFBQUEKCUFBQUFBR3NBQUFBQUFBQUFiQUFBQUFBQUFBQnRBQUFBQUFBQUFHNEFBQUFBQUFBQWJ3QUFBQUFBQUFCd0FBQUFB
+        QUFBCglBSEVBQUFBQUFBQUFjZ0FBQUFBQUFBQnpBQUFBQUFBQUFIUUFBQUFBQUFBQWRRQUFBQUFBQUFCMkFBQUFBQUFBQUhjQQoJQUFBQUFBQUFlQUFBQUFBQUFBQjVB
+        QUFBQUFBQUFIb0FBQUFBQUFBQWV3QUFBQUFBQUFCOEFBQUFBQUFBQUgwQUFBQUEKCUFBQUFmZ0FBQUFBQUFBQi9BQUFBQUFBQUFJQUFBQUFBQUFBQWdRQUFBQUFBQUFD
+        Q0FBQUFBQUFBQUlNQUFBQUFBQUFBCgloQUFBQUFBPQoJPC9kYXRhPgoJPGtleT5qdWNlUGx1Z2luU3RhdGU8L2tleT4KCTxkYXRhPgoJM3QxZFB3QUFBRDhBQUFBL0FB
+        QUFQd0FBQUQ4QUFBQS9BQUFBUDNzVUxqNEFBQUEvQUFBQUFNM016RDJSbW1BL0FBREEKCVB0N2RYVDlWVmRVK1ZWVVZQd0FBQUQ4QUFBQStBQUJnUDZxcXFqNEFBQUFB
+        cTZvcVB3QUFBRDhBQUFBL0FBQUFQd0FBCglBRDhBQUFBL0FBQUFQd0FBQUQ4QUFBQS9pWWdJUG9tSUNENkppQWcraVlnSVBvbUlDRDZKaUFnK2lZZ0lQb21JQ0Q3ZQoJ
+        M1YwLzN0MWRQOTdkWFQvZTNWMC8zdDFkUDk3ZFhUL2UzVjAvM3QxZFB3QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEKCUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB
+        QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFDcnFpbytWRlhWCglQbFpWRlQ5d0hFYys1RGhPUHdBQUFEOEFBQUEvQUFCQVB3QUFZRC9lM1YwLzN0MWRQOTdk
+        WFQ5UStpUS8zdDFkUDk3ZAoJWFQvZTNWMC8zdDFkUHdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEKCUFBQUFBQUFB
+        QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFJQStBQUFBQUFBQVFEOEFBQUFBCglBQUFBQUk3ak9EOEFBQ0EvQUFBQVAzc1VMajdlM1YwL3E2
+        b3FQZ0FBd0Q2YW1aayszdDFkUHdBQWdEMEFBRUErQUFDQQoJUFFBQVFENHdtUU03QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB
+        QUFBQUFBQUEKCUFBQUFBQUFBek14TVBzek1URDRBQUFBQUFBQUFBQT09Cgk8L2RhdGE+Cgk8a2V5Pm1hbnVmYWN0dXJlcjwva2V5PgoJPGludGVnZXI+MTExMTU3NzE3
+        MjwvaW50ZWdlcj4KCTxrZXk+bmFtZTwva2V5PgoJPHN0cmluZz5VbnRpdGxlZDwvc3RyaW5nPgoJPGtleT5zdWJ0eXBlPC9rZXk+Cgk8aW50ZWdlcj4yMDAwMDQwNzU4
+        PC9pbnRlZ2VyPgoJPGtleT50eXBlPC9rZXk+Cgk8aW50ZWdlcj4xNjM1MDgzODk2PC9pbnRlZ2VyPgoJPGtleT52ZXJzaW9uPC9rZXk+Cgk8aW50ZWdlcj4wPC9pbnRl
+        Z2VyPgo8L2RpY3Q+CjwvcGxpc3Q+CgEAAAAAAAAAAAA=
+      >
+      FLOAT 569 296 711 407
+      FXID {C13AF64B-B407-5B48-BF05-7140368225A7}
+      WAK 0
+    >
+  >
+  <TRACK {6B9E8E14-C3E2-CC41-90A5-79B68159C6B6}
+    NAME "B-format Mix"
+    PEAKCOL 16777429
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    ISBUS 1 1
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {6B9E8E14-C3E2-CC41-90A5-79B68159C6B6}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {0803271B-81A8-D044-9C96-E353AC78B82A}
+    NAME Planewave
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    ISBUS 0 0
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {0803271B-81A8-D044-9C96-E353AC78B82A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 42 114 793 645
+      SHOW 0
+      LASTSEL 1
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Encode/Planewave ""
+        -29.799216 0.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {84AC6EB0-3763-BC42-A582-3C3DB8879329}
+      WAK 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Transform/DirectO ""
+        0.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {C5690891-02E9-F44F-8FB2-9F6B31CD38AB}
+      WAK 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 34.3511875
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      IGUID {9A6B61F4-820E-F54A-8B47-933DEB979082}
+      IID 1
+      NAME "field recording mono.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {37AB3C3F-08E3-0E44-85BF-1AAC5DD8622A}
+      <SOURCE WAVE
+        FILE "media/field recording mono.wav"
+      >
+    >
+  >
+  <TRACK {B8D8467D-AB76-D244-9CAB-43584F1FFA76}
+    NAME Omni
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 1 0 0
+    IPHASE 0
+    ISBUS 0 0
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {B8D8467D-AB76-D244-9CAB-43584F1FFA76}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 39 36 793 686
+      SHOW 0
+      LASTSEL 1
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Encode/Omni ""
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 601 551 554 120
+      FXID {3860813D-9EC0-F343-82B2-217CDFDE144B}
+      WAK 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Transform/FocusPressPushZoom ""
+        2.000000 0.000000 0.000000 0.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {80B5247F-F9F9-C543-87C9-31846A0CF510}
+      WAK 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 34.3511875
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      IGUID {F096CBA2-DAE3-A04C-937F-0953E0217243}
+      IID 2
+      NAME "field recording mono.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {AA683A22-4C28-F341-84AE-FF292A2D02E8}
+      <SOURCE WAVE
+        FILE "media/field recording mono.wav"
+      >
+    >
+  >
+  <TRACK {14C0CDC5-EB37-0F45-818A-5AAB553305D0}
+    NAME Spreader
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 1 0 0
+    IPHASE 0
+    ISBUS 0 0
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 0
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {14C0CDC5-EB37-0F45-818A-5AAB553305D0}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 131 91 793 686
+      SHOW 0
+      LASTSEL 2
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Encode/Spreader ""
+        5.000000 3.000000 6.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {EB180843-E3C7-4A48-9E49-097B0A0AD40C}
+      WAK 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Transform/RotateTiltTumble ""
+        0.000000 0.000000 0.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {FA102AAF-B0F9-3B48-9A4A-CB750ACC9111}
+      WAK 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Transform/FocusPressPushZoom ""
+        0.000000 0.000000 0.000000 0.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {651D54A5-3F94-2947-AE90-077439AACC39}
+      WAK 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 34.3511875
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 0
+      IGUID {2C276793-546D-A249-9491-27FE44226F33}
+      IID 3
+      NAME "field recording mono.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {5A825955-23D6-D242-A4C8-3CCAE426161E}
+      <SOURCE WAVE
+        FILE "media/field recording mono.wav"
+      >
+    >
+  >
+  <TRACK {A7648095-A020-7946-A7D3-6C5AEC955BDF}
+    NAME Diffuser
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 1 0 0
+    IPHASE 0
+    ISBUS 0 0
+    BUSCOMP 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FREEMODE 0
+    SEL 1
+    REC 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 4
+    FX 1
+    TRACKID {A7648095-A020-7946-A7D3-6C5AEC955BDF}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 52 91 793 686
+      SHOW 0
+      LASTSEL 1
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Encode/Diffuser ""
+        5.000000 3.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {388F5642-73E9-3849-B698-34C2A2675476}
+      WAK 0
+      BYPASS 0 0 0
+      <JS ATK/FOA/Transform/FocusPressPushZoom ""
+        1.000000 0.000000 0.000000 0.000000 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {8A88499C-F5D2-E44D-9E85-18ACA6F3880B}
+      WAK 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 34.3511875
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.01 0 1 0 0
+      FADEOUT 1 0.01 0 1 0 0
+      MUTE 0
+      SEL 1
+      IGUID {05FAAA78-31C1-8149-AA41-DC248A38521C}
+      IID 4
+      NAME "field recording mono.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {0B4D6309-4DC7-DB44-B346-CF33F73F8CFC}
+      <SOURCE WAVE
+        FILE "media/field recording mono.wav"
+      >
+    >
+  >
+  <EXTENSIONS
+    <S&M_PROJNOTES
+      |This projects demonstrates four different approaches to how mono sources can be encoded to First Order Ambisonics (FOA) using teh ATK for Reaper plugins:
+      |
+      |- Planewave
+      |- Omni
+      |- Spreader
+      |- Diffuser
+      |
+      |Often it will make sense to perform further spatial transforms once the sound source has been encoded.
+      |
+      |The project contains 6 tracks:
+      |
+      |- Visualize : Here the Harpex plugin is used to visualise the effect of encodings and transforms. Sound from this track is NOT passed on to the Master bus, it is only used for visualisation.
+      |- B-format Mix : This track collects the mix of all encoding from its subfolder tracks, but this track does not contain any media items of effects in itself. Sound from this track is passed on to the master bus as well as the Visualize track.
+      |- 4 tracks used for the different kinds of encodings, one for each. Unmute one of these at a time, and study and play with the effect chain on the track.
+      |
+      |Decoding from B-format to Binaural (Headphone listening) takes place at the master bus.
+      |
+      |The setting up and use of this project is demonstrated in this screencast:
+      |
+      |https://vimeo.com/182434517
+    >
+  >
+>
